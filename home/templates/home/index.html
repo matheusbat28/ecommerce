@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/home/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="conteiner-img" class="conteiner h-75">
+    <img src="{% static 'img/back-image.jpg' %}" alt="">
+</div>
+<div id="conteiner-prod" class="conteiner h-100">
+    <div id="carouselExampleSlidesOnly" class="carousel slide mt-5 h-75 w-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-50">
+          <div class="carousel-item active">
+            <img src="https://source.unsplash.com/random/800x600" class="d-block w-100 h-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/random/800x600" class="d-block w-100 h-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/random/800x600" class="d-block w-100 h-50" alt="...">
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

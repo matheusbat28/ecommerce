@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/login/styles.css'%}">
+{% endblock %}
+
+{% block title %} login {% endblock %}
+
+{% block content %}
+
+<img id="image" src="{% static 'img/ecommerce.png' %}" alt="">
+<div id="conteiner-1" class="container mt-5">
+    <form id="conteiner" method="POST" class="container-fluid w-50 border border-light rounded">
+        {% csrf_token %}
+        <input type="text" name="username" class="form-control w-75 mb-4 input-estilo" placeholder="Usuário:" required>
+        <input type="password" name="password" class="form-control w-75 mb-5 input-estilo" placeholder="Senha:"
+            required>
+        <div id="btn" class="container-fluid">
+            <div id="btn-conteiner" class="container-fluid h-50">
+                <input class="btn btn-primary w-50" type="submit" value="Entrar">
+            </div>
+            <div id="menssage-conteiner" class="container-fluid h-50">
+                {% include 'partial/_message.html' %}
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

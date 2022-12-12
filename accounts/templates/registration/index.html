@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/registration/styles.css' %}">
+{% endblock %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+
+<img id="image" src="{% static 'img/ecommerce.png' %}" alt="">
+<div class="container mt-5">
+    <form id="conteiner" method="POST" class="container h-75 border border-light rounded">
+        {% csrf_token %}
+        <div id="form-1">
+            <input type="text" name="first_name" class="form-control w-75 mb-4 input-estilo" placeholder="Nome:"
+                required>
+            <input type="text" name="last_name" class="form-control w-75 mb-4 input-estilo" placeholder="Sobrenome:"
+                required>
+            <input type="text" name="cpf" id="cpf" class="form-control w-75 mb-4 input-estilo" placeholder="Cpf:"
+                required>
+            <input type="tel" name="telephone" id="tel" class="form-control w-75 mb-4 input-estilo"
+                placeholder="Telefone:">
+        </div>
+        <div id="form-2">
+            <input type="text" name="username" class="form-control w-75 mb-4 input-estilo" placeholder="Usuário:"
+                required>
+            <input type="email" name="email" class="form-control w-75 mb-4 input-estilo" placeholder="Email:">
+            <input type="password" name="password" class="form-control w-75 mb-4 input-estilo" placeholder="Senha:"
+                required>
+            <input type="password" name="password-2" class="form-control w-75 mb-4 input-estilo"
+                placeholder="Senha novamente:" required>
+        </div>
+        <div id="btn">
+            <input type="submit" class="btn btn-primary h-50 w-25 mb-2 border border-light rounded" value="Cadastrar">
+            {% include 'partial/_message.html' %}
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script defer src="{%static 'js/registration/scripts.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,43 @@
+body {
+    overflow: hidden;
+}
+
+#conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 15%;
+    position: absolute;
+    z-index: 1;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background-size: cover;
+}
+
+#btn {
+    height: 40%;
+}
+
+#btn-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menssage-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
